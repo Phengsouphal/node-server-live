@@ -15,7 +15,8 @@ app.use('/thumbnails', express.static('server/thumbnails'));
 // app.use(bodyParse.urlencoded({extended: true}));
 // app.use(bodyParse.json({extended: true}));
 app.use('/', (req, res) => {
-    res.render('index');
+    // res.send({status:200});
+    res.render('/index.html');
 });
 
 app.listen(port, () => console.log(`App listening on ${port}!`));
