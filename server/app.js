@@ -11,12 +11,10 @@ const express = require('express'),
 
 app.use(express.static('public'));
 app.use('/thumbnails', express.static('server/thumbnails'));
-// app.use(flash());
 
 // app.use(bodyParse.urlencoded({extended: true}));
 // app.use(bodyParse.json({extended: true}));
-console.log('dddd')
-app.get('*', (req, res) => {
+app.use('/', (req, res) => {
     res.render('index');
 });
 
